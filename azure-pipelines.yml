@@ -54,10 +54,11 @@ steps:
   inputs:
     PathtoPublish: $(build.artifactstagingdirectory)
 
-- task: AzureWebApp@1
-  displayName: Azure Web App Deploy
+- task: AzureRmWebAppDeployment@4
   inputs:
-    azureSubscription: $(serviceConnectionToAzure)
-    appType: webAppLinux
-    appName: $(appName)
-    package: $(build.artifactstagingdirectory)/**/*.zip
+    ConnectionType: 'AzureRM'
+    azureSubscription: 'MAIC - TEK Experts CR - v-doort - Group#1(9e9e1a84-e844-4b3c-a731-23d189b43a2e)'
+    appType: 'webAppLinux'
+    WebAppName: 'calebapp2'
+    packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
+    RuntimeStack: 'PHP|7.4'
