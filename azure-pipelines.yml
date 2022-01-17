@@ -36,7 +36,10 @@ steps:
 #- script: composer install --no-interaction --prefer-dist
 #  displayName: 'composer install'
 
-
+- task: PowerShell@2
+  inputs:
+    targetType: 'inline'
+    script: 'Write-Host "Hello World"'
 
 # add these as the last steps (below all the other `task` items under `steps`)
 # to deploy to your app service
