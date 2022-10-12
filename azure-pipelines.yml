@@ -60,8 +60,8 @@ steps:
 - task: AzureRmWebAppDeployment@4
   inputs:
     ConnectionType: 'AzureRM'
-    azureSubscription: 'MAIC - TEK Experts CR - v-doort - Group#1(9e9e1a84-e844-4b3c-a731-23d189b43a2e)'
+    azureSubscription: 'PHP'
     appType: 'webAppLinux'
-    WebAppName: 'calebapp2'
+    WebAppName: 'CalebPHPapp'
     packageForLinux: '$(Build.ArtifactStagingDirectory)/**/*.zip'
     RuntimeStack: 'PHP|7.4'
