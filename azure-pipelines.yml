@@ -52,11 +52,11 @@ steps:
     archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
     replaceExistingArchive: true
 
-- task: PublishBuildArtifacts@1
-  displayName: Publish Artifact
+- task: PublishPipelineArtifact@1
   inputs:
-    PathtoPublish: $(build.artifactstagingdirectory)
-
+    targetPath: '$(build.artifactstagingdirectory)'
+    artifact: 'drop'
+    publishLocation: 'pipeline'
 - task: AzureRmWebAppDeployment@4
   inputs:
     ConnectionType: 'AzureRM'
