@@ -63,6 +63,6 @@ steps:
     ConnectionType: 'AzureRM'
     azureSubscription: 'PHP'
     appType: 'webAppLinux'
-    WebAppName: 'CalebPHPapp'
+    WebAppName: 'CALEBPHP'
     packageForLinux: '$(Build.ArtifactStagingDirectory)/**/*.zip'
     RuntimeStack: 'PHP|7.4'
